@@ -1,8 +1,3 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +11,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
+            min-height: 80vh;
             margin: 0;
             background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
             color: white;
@@ -28,7 +23,7 @@
         }
 
         #game-board {
-            border-radius: 8px;
+            border-radius: 5px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             background-color: #111;
             border: 2px solid #444;
@@ -42,14 +37,14 @@
         }
 
         .controls {
-            margin-top: 20px;
+            margin-top: 8px;
             display: flex;
-            gap: 15px;
+            gap: 8px;
         }
 
         button {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 7px 25px;
+            font-size: 14px;
             border: none;
             border-radius: 5px;
             background-color: #4CAF50;
@@ -84,16 +79,16 @@
 
         .mobile-controls {
             display: none;
-            margin-top: 20px;
+            margin-top: 15px;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
-            gap: 10px;
-            width: 200px;
+            gap: 5px;
+            width: 100px;
         }
 
         .mobile-controls button {
-            padding: 15px;
-            font-size: 20px;
+            padding: 6.50px;
+            font-size: 15px;
         }
 
         .up-btn { grid-column: 2; grid-row: 1; }
@@ -107,16 +102,16 @@
             }
             
             #game-board {
-                width: 300px;
+                width: 350px;
                 height: 300px;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Classic Snake Game by Tarun Tyagi </h1>
+    <h1>3D Snake Game by Tarun Tyagi </h1>
     <div class="game-container">
-        <canvas id="game-board" width="400" height="400"></canvas>
+        <canvas id="game-board" width="500" height="450"></canvas>
         <div class="game-over" id="game-over">
             <h2>Game Over!</h2>
             <p>Your score: <span id="final-score">0</span></p>
@@ -155,15 +150,15 @@
         let food = generateFood();
         let direction = 'right';
         let nextDirection = 'right';
-        let gameSpeed = 150;
+        let gameSpeed = 125;
         let score = 0;
         let gameRunning = false;
         let gamePaused = false;
         let gameLoop;
 
-        // Draw game elements
+        
         function draw() {
-            // Clear the canvas
+            
             ctx.fillStyle = 'black';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             
@@ -369,8 +364,5 @@
     </script>
 </body>
 </html>
-'''
-
-
 
 
