@@ -53,7 +53,7 @@
         }
 
         button {
-            padding: 7px 25px;
+            padding: 15px  30px;
             font-size: 14px;
             border: none;
             border-radius: 5px;
@@ -97,8 +97,8 @@
         }
 
         .mobile-controls button {
-            padding: 6.50px;
-            font-size: 15px;
+            padding: 10px;
+            font-size: 17px;
         }
 
         .up-btn { grid-column: 2; grid-row: 1; }
@@ -165,7 +165,7 @@
             
             #game-board {
                 width: 365px;
-                height: 360px;
+                height: 390px;
             }
         }
     </style>
@@ -182,7 +182,7 @@
     </div>
 
     <div class="game-container">
-        <canvas id="game-board" width="430" height="440"></canvas>
+        <canvas id="game-board" width="540" height="600"></canvas>
         <div class="game-over" id="game-over">
             <h2>Game Over!</h2>
             <p>Your score: <span id="final-score">0</span></p>
@@ -225,7 +225,7 @@
         let food = generateFood();
         let direction = 'right';
         let nextDirection = 'right';
-        let gameSpeed = 210; // game speed control
+        let gameSpeed = 218;                                                                                          // game speed control
         let score = 0;
         let gameRunning = false;
         let gamePaused = false;
@@ -320,7 +320,7 @@
                 
                 // Increase speed every 100 points
                 if (score % 100 === 0 && gameSpeed > 100) {
-                    gameSpeed -= 10; // Decrease the speed for faster gameplay
+                    gameSpeed -= 218;                                                               // snake speed 
                     clearInterval(gameLoop);
                     gameLoop = setInterval(gameStep, gameSpeed);
                 }
@@ -400,7 +400,7 @@
             nextDirection = 'right';
             score = 0;
             scoreElement.textContent = '0';
-            gameSpeed = 210; // Reset snake speed control
+            gameSpeed = 218;                                                                                            // Reset snake speed control
             gameOverElement.style.display = 'none';
         }
 
