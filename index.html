@@ -103,7 +103,7 @@
             
             #game-board {
                 width: 365px;
-                height: 375px;
+                height: 369px;
             }
         }
     </style>
@@ -111,7 +111,7 @@
 <body>
     <h1>3D Snake Game by Tarun Tyagi </h1>
     <div class="game-container">
-        <canvas id="game-board" width="435" height="450"></canvas>
+        <canvas id="game-board" width="430" height="445"></canvas>
         <div class="game-over" id="game-over">
             <h2>Game Over!</h2>
             <p>Your score: <span id="final-score">0</span></p>
@@ -150,7 +150,7 @@
         let food = generateFood();
         let direction = 'right';
         let nextDirection = 'right';
-        let gameSpeed = 125;
+        let gameSpeed = 120;
         let score = 0;
         let gameRunning = false;
         let gamePaused = false;
@@ -303,7 +303,7 @@
             nextDirection = 'right';
             score = 0;
             scoreElement.textContent = '0';
-            gameSpeed = 150;
+            gameSpeed = 120;
             gameOverElement.style.display = 'none';
         }
 
@@ -364,4 +364,5 @@
     </script>
 </body>
 </html>
+
 
