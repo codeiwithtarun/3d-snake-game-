@@ -92,13 +92,13 @@
             margin-top: 5px;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
-            gap: 4px;
-            width: 140px;
+            gap: 6px;
+            width: 200px;
         }
 
         .mobile-controls button {
-            padding: 10px;
-            font-size: 17px;
+            padding: 15px;
+            font-size: 15px;
         }
 
         .up-btn { grid-column: 2; grid-row: 1; }
@@ -225,7 +225,7 @@
         let food = generateFood();
         let direction = 'right';
         let nextDirection = 'right';
-        let gameSpeed = 218;                                                                                          // game speed control
+        let gameSpeed = 210; // game speed control
         let score = 0;
         let gameRunning = false;
         let gamePaused = false;
@@ -320,7 +320,7 @@
                 
                 // Increase speed every 100 points
                 if (score % 100 === 0 && gameSpeed > 100) {
-                    gameSpeed -= 218;                                                               // snake speed 
+                    gameSpeed -= 10; // Decrease the speed for faster gameplay
                     clearInterval(gameLoop);
                     gameLoop = setInterval(gameStep, gameSpeed);
                 }
@@ -400,7 +400,7 @@
             nextDirection = 'right';
             score = 0;
             scoreElement.textContent = '0';
-            gameSpeed = 218;                                                                                            // Reset snake speed control
+            gameSpeed = 210; // Reset snake speed control
             gameOverElement.style.display = 'none';
         }
 
