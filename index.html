@@ -150,7 +150,7 @@
         let food = generateFood();
         let direction = 'right';
         let nextDirection = 'right';
-        let gameSpeed = 190;                                                          // game speed control
+        let gameSpeed = 210;                                                          // game speed control
         let score = 0;
         let gameRunning = false;
         let gamePaused = false;
@@ -247,7 +247,7 @@
                 
                 // Increase speed every 100 points
                 if (score % 100 === 0 && gameSpeed > 100) {
-                    gameSpeed = 190;                                          //snake speed slow 
+                    gameSpeed = 210;                                          //snake speed slow 
                     clearInterval(gameLoop);
                     gameLoop = setInterval(gameStep, gameSpeed);
                 }
@@ -303,7 +303,7 @@
             nextDirection = 'right';
             score = 0;
             scoreElement.textContent = '0';
-            gameSpeed = 190;                                                          //snake speed control
+            gameSpeed = 210;                                                          //snake speed control
             gameOverElement.style.display = 'none';
         }
 
@@ -364,6 +364,7 @@
     </script>
 </body>
 </html>
+
 
 
 
