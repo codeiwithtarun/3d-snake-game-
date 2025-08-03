@@ -150,7 +150,7 @@
         let food = generateFood();
         let direction = 'right';
         let nextDirection = 'right';
-        let gameSpeed = 10;
+        let gameSpeed = 70;
         let score = 0;
         let gameRunning = false;
         let gamePaused = false;
@@ -245,9 +245,9 @@
                 scoreElement.textContent = score;
                 food = generateFood();
                 
-                // Increase speed every 50 points
+                // Increase speed every 100 points
                 if (score % 100 === 0 && gameSpeed > 100) {
-                    gameSpeed -= 200;
+                    gameSpeed -= 70;
                     clearInterval(gameLoop);
                     gameLoop = setInterval(gameStep, gameSpeed);
                 }
@@ -303,7 +303,7 @@
             nextDirection = 'right';
             score = 0;
             scoreElement.textContent = '0';
-            gameSpeed = 200;
+            gameSpeed = 70;
             gameOverElement.style.display = 'none';
         }
 
@@ -364,6 +364,7 @@
     </script>
 </body>
 </html>
+
 
 
 
