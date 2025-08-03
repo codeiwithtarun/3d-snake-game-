@@ -12,7 +12,7 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            margin: 100;
+            margin: 0;
             background: linear-gradient(135deg, #0a0a3d, #6998ff, #7f51ff, #ff80a3);
             color: white;
             overflow: hidden;
@@ -103,7 +103,7 @@
             
             #game-board {
                 width: 365px;
-                height: 369px;
+                height: 360px;
             }
         }
     </style>
@@ -111,7 +111,7 @@
 <body>
     <h1>3D Snake Game by Tarun Tyagi </h1>
     <div class="game-container">
-        <canvas id="game-board" width="430" height="445"></canvas>
+        <canvas id="game-board" width="430"height="440"></canvas>
         <div class="game-over" id="game-over">
             <h2>Game Over!</h2>
             <p>Your score: <span id="final-score">0</span></p>
@@ -364,5 +364,6 @@
     </script>
 </body>
 </html>
+
 
 
