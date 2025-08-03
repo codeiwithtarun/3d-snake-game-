@@ -11,9 +11,9 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 80vh;
-            margin: 0;
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            min-height: 100vh;
+            margin: 100;
+            background: linear-gradient(135deg, #0a0a3d, #6998ff, #7f51ff, #ff80a3);
             color: white;
             overflow: hidden;
         }
@@ -23,15 +23,15 @@
         }
 
         #game-board {
-            border-radius: 5px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
             background-color: #111;
             border: 2px solid #444;
         }
 
         .score-display {
-            margin-top: 20px;
-            font-size: 24px;
+            margin-top: 3px;
+            font-size: 21px;
             font-weight: bold;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
@@ -39,7 +39,7 @@
         .controls {
             margin-top: 8px;
             display: flex;
-            gap: 8px;
+            gap: 7px;
         }
 
         button {
@@ -47,17 +47,17 @@
             font-size: 14px;
             border: none;
             border-radius: 5px;
-            background-color: #4CAF50;
+            background-color: #ff80a3;
             color: white;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #0a0a3d;
             transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
         .game-over {
@@ -79,11 +79,11 @@
 
         .mobile-controls {
             display: grid;
-            margin-top: 15px;
+            margin-top: 5px;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
-            gap: 5px;
-            width: 100px;
+            gap: 4px;
+            width: 140px;
         }
 
         .mobile-controls button {
@@ -102,8 +102,8 @@
             }
             
             #game-board {
-                width: 350px;
-                height: 300px;
+                width: 365px;
+                height: 375px;
             }
         }
     </style>
@@ -111,7 +111,7 @@
 <body>
     <h1>3D Snake Game by Tarun Tyagi </h1>
     <div class="game-container">
-        <canvas id="game-board" width="500" height="450"></canvas>
+        <canvas id="game-board" width="435" height="450"></canvas>
         <div class="game-over" id="game-over">
             <h2>Game Over!</h2>
             <p>Your score: <span id="final-score">0</span></p>
@@ -364,6 +364,4 @@
     </script>
 </body>
 </html>
-
-
 
