@@ -246,8 +246,8 @@
                 food = generateFood();
                 
                 // Increase speed every 100 points
-                if (score % 100 === 0 && gameSpeed > 100) {
-                    gameSpeed -=40;
+                if (score % 100 === 0 && gameSpeed > 40) {
+                    gameSpeed =40;
                     clearInterval(gameLoop);
                     gameLoop = setInterval(gameStep, gameSpeed);
                 }
@@ -364,6 +364,7 @@
     </script>
 </body>
 </html>
+
 
 
 
