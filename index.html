@@ -247,7 +247,7 @@
                 
                 // Increase speed every 100 points
                 if (score % 100 === 0 && gameSpeed > 100) {
-                    gameSpeed -= 70;
+                    gameSpeed -=70;
                     clearInterval(gameLoop);
                     gameLoop = setInterval(gameStep, gameSpeed);
                 }
@@ -364,6 +364,7 @@
     </script>
 </body>
 </html>
+
 
 
 
